@@ -19,12 +19,18 @@
 
 ################################################################################
 # Write your functions below:
-# Body
+def check_fermat(a, b, c, n):
+	if n > 2 and a**n + b**n == c**n: 
+		print "Holy smokes, Fermat was wrong!"
+	else:
+		print "No, that doesn't work."
 
-
-
-
-
+def check_fermat_ints():
+	prompt_a = raw_input('What is the value of a?\n')
+	prompt_b = raw_input('What is the value of b?\n')
+	prompt_c = raw_input('What is the value of c?\n')
+	prompt_n = raw_input('What is the value of n?\n')
+	check_fermat(int(prompt_a), int(prompt_b), int(prompt_c), int(prompt_n))
 
 
 
@@ -32,13 +38,8 @@
 # Write your functions above:
 ################################################################################
 def main():
-    """Call your function within this function.
-    When complete have one function call in this function:
-    check_fermat_ints(1,2,3,4)
-    and two functions defined in the body:
-    check_fermat_ints()
-    check_fermat()
-    """
+    check_fermat_ints() #think i'm missing something compared to the example, but this seems to do the same thing?
+    
     print("Hello World!")
 
 

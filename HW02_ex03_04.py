@@ -27,12 +27,32 @@
 # should be only two statements in the body of this function, not four.
 ################################################################################
 # Write your functions below:
-# Body
+#1
+def do_twice(f):
+    f()
+    f()
 
+def print_spam():
+	print 'spam'
 
+do_twice(print_spam)
 
+#2 & 3 & 4
+def do_twice(f , blah):
+	f(blah)
+	f(blah)
 
+def print_twice(k):
+    print k
+    print k
 
+do_twice(print_twice , 'whatever')
+
+#5
+
+def do_four(f, blah):
+	do_twice(f , blah)
+	do_twice(f , blah)
 
 
 # Write your functions above:
@@ -44,6 +64,7 @@ def main():
     """
     print("Hello World!")
     
+do_four(print_twice , 'strawberry')    
 
 
 if __name__ == "__main__":
